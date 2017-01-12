@@ -6,7 +6,12 @@
             - Add a property named `size` and set it to a number value between `0` and `20`.
             - Add a property named `contents` and set it to be an empty array.
  */
+var plainBox = {};
+    plainBox.color = 'blue';
+    plainBox.size = 15;
+    plainBox.contents = [ ];
 
+console.log (plainBox);
 
 /*
     # An object with properties declared line by line
@@ -22,6 +27,15 @@
             - add a key named `driver` and set it to be `null`.
             - add a key named `passengers` and set it to be an empty array.
  */
+var stockCar = {
+    model: 'Honda',
+    year: 2011,
+    automaticTransmission: true,
+    driver: null,
+    passengers: [ ]
+};
+
+console.log(stockCar);
 
 
 /*
@@ -37,8 +51,10 @@
 
         Finally, invoke your new function while passing in the `plainPerson` object and additional agrument values, then store the return value in a variable named `completePerson`. Use `console.log` three times to print the entire object, just the value at `name`, and just the value at `age`.
  */
-
-
+var plainPerson = {};
+function buildPerson ( ){
+    
+}
 /*
     # Display values of objects that are inside an array
         Declare a new variable named `arrayOfObjects` and set it to be [this array of objects](https://gist.github.com/sgnl/958adf99007329d2e4ff).
