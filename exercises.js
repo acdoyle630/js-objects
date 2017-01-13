@@ -52,9 +52,14 @@ console.log(stockCar);
         Finally, invoke your new function while passing in the `plainPerson` object and additional agrument values, then store the return value in a variable named `completePerson`. Use `console.log` three times to print the entire object, just the value at `name`, and just the value at `age`.
  */
 var plainPerson = {};
-function buildPerson ( ){
-    
+function buildPerson (person, nameString, age) {
+    person.name=nameString;
+    person.age=age;
+    return person;
 }
+var completePerson = buildPerson (plainPerson, 'Adam', 28);
+console.log (completePerson);
+
 /*
     # Display values of objects that are inside an array
         Declare a new variable named `arrayOfObjects` and set it to be [this array of objects](https://gist.github.com/sgnl/958adf99007329d2e4ff).
@@ -76,10 +81,27 @@ function buildPerson ( ){
             purchase total:  15.62
             =====
             ...
- */
+ */var arrayOfObjects = [
+    {
+        id: 0,
+        purchaseDate: 'Monday Jan 25 2015 2:01 PM',
+        purhaseTotal: 279.38
+    },
+    {
+        id: 1,
+        purchaseDate: 'Monday Jan 27 2015 11:31 AM',
+        purchaseTotal: 79.8
+    },
+    {
+        id: 2,
+        purchaseDate: 'Monday Feb 1 2015 7:56 AM',
+        purchaseTotal: 15.62
+    }
+];
+console.log (arrayOfObjects);
 
+/*  
 
-/*
     # Addition with an object
         Declare a new variable named sumObj and set it to be a new object with the properties `a`, `b`, and `result`. Properties 'a' and 'b' will be set to a number and result will be 'undefined.'
 
@@ -89,6 +111,19 @@ function buildPerson ( ){
 
         Go ahead and create some more objects and pass them to this function. Have fun with it.
 */
+var sumObj ={
+    a: 20,
+    b: 55,
+    result: undefined 
+};
+
+function objectAddition (obj) {
+    obj.result = obj.a + obj.b; 
+    return obj;
+    
+}
+console.log (objectAddition(sumObj));
+
 
 
 /*
@@ -104,7 +139,11 @@ function buildPerson ( ){
 
         Invoke this function and pass in your object. Further test by changing the values of the object being passed in or **create more** objects and invoke your function multiple times.
  */
-
+function printObj (obj) {
+    
+    console.log( obj.result + ' = ' + obj.a  + ' + ' + obj.b);
+}
+printObj (sumObj);
 
 /*
     # Putting stuff in `plainBox`
