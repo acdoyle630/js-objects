@@ -30,7 +30,7 @@ console.log (plainBox);
 var stockCar = {
     model: 'Honda',
     year: 2011,
-    automaticTransmission: true,
+    automaticTransmission: false,
     driver: null,
     passengers: [ ]
 };
@@ -151,6 +151,14 @@ printObj (sumObj);
 
         Invoke your function and pass in your object (which should be `plainBox`), store the result to a variable named plainBoxResult and use `console.log` to inspect your results.
  */
+function putInPlainBox (object) {
+    for (var i=0; i<10; i++) {
+        object.contents.push (Math.floor(Math.random() * 100));
+      }
+   return object;
+}
+var plainBoxResults = putInPlainBox(plainBox);
+console.log (plainBoxResults);
 
 
 /*
@@ -161,7 +169,14 @@ printObj (sumObj);
 
         Invoke your function and pass in your stockCar object, store the result to a variable named isAutomaticTransmission and use `console.log` to inspect your results.
  */
-
+function detectingTransmission (object){
+    if (object.automaticTransmission === true) {
+        return 'gotem!';
+    } else {
+        return 'fucker';
+    }
+}
+console.log (detectingTransmission(stockCar));
 
 /*
     # Who's driving this thing?!
