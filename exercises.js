@@ -186,11 +186,11 @@ console.log (detectingTransmission(stockCar));
 
         Invoke your function and pass in your objects, store the result to a variable named stockCarWithDriver, and inspect your results. Consider using `plainPerson` as your driver.
  */
-function addDriver (object, person) {
-    object.person = person;
+function addDriver (object, driver) {
+    object.driver = driver;
     return object;
 }
-var stockCarWithDriver = addDriver(stockCar, 'Adam');
+var stockCarWithDriver = addDriver(stockCar, 'Adam' );
 console.log (stockCarWithDriver);
 
 /*
@@ -213,7 +213,7 @@ console.log (stockCarWithDriver);
 
     # Display passengers
         Delcare a function named `displayPassengers` and set one parameter which will be a **car**. This function should print out each passenger's name and age one line at a time.
-
+    
     example output:
         'Jon, age 19, is riding dirty!'
         'Jason, age 12, is riding dirty!'
@@ -225,3 +225,34 @@ console.log (stockCarWithDriver);
         'Marifel, age 19, is riding dirty!'
         'Victor, age 19, is riding dirty!'
  */
+/*var passengerList  = ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor'];
+var passengerAge = [19, 12, 21, 22, 16, 9, 19, 20, 15];
+function addPassengers (car, names, ages) {
+    for (var i=0; i<names.length; i++) {
+    car.names = names;
+    car.ages = ages;      
+    }
+    return names[i] + ' age ' + ages[i] + ' is riding dirty! ';
+}
+
+console.log (addPassengers(stockCarWithDriver, passengerList, passengerAge));*/
+
+/*console.log (stockCarWithDriver);
+
+
+
+*/
+
+
+
+
+
+
+
+
+/*addPassengers(stockCar, passengerList, passengerAge);
+console.log (stockCar);
+
+console.log (buildPerson (0, passengerList, passengerAge));
+
+*/
